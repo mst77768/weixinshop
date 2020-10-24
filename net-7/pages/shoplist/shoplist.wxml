@@ -1,0 +1,2 @@
+<!--pages/shoplist/shoplist.wxml-->
+<text>大家好我叫{{msg}}</text>
