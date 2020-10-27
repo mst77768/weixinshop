@@ -16,9 +16,9 @@ scroll-view {
     height: 50rpx;
     line-height: 50rpx;
     margin-top: 10rpx;
-    margin-bottom: 25rpx;
+    margin-bottom: 30rpx;
     color: #999;
-    font-size: 28rpx;
+    font-size: 32rpx;
 }
 
 .ative {

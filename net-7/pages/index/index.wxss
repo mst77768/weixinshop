@@ -183,5 +183,66 @@ scroll-view view {
     z-index: 999;
 }
 
+page {
+    background-color: #f1f1f1;
+}
+
 
 /* 到这里上面是轮播图切换页面的主体css */
+
+.lunbox {
+    width: 95%;
+    height: 440rpx;
+    background-color: white;
+    margin: 10rpx auto;
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+}
+
+.lunzhi {
+    width: 95%;
+    height: 100rpx;
+    margin: 0rpx auto;
+    margin-top: -4rpx;
+    border-top: 1px solid #ccc;
+    border-radius: 20rpx;
+    background-color: white;
+    display: flex;
+}
+
+.lunzhi>.imgbox {
+    width: 35%;
+    height: 100%;
+}
+
+.lunzhi>.imgbox image {
+    width: 80%;
+    height: 80%;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+}
+
+.lunzhi>.nbtext {
+    margin-left: 16rpx;
+    width: 60%;
+    height: 100%;
+}
+
+.lunzhi>.nbtext swiper-item {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    color: #333333;
+}
+
+.tupan {
+    width: 95%;
+    height: 350rpx;
+    border-radius: 20rpx;
+    margin: 0 auto;
+}
+
+.tupan image {
+    width: 100%;
+    height: 100%;
+}

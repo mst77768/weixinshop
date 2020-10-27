@@ -7,7 +7,21 @@ Page({
     data: {
         list: [],
         imgsrc: "https://x.dscmall.cn/storage/data/touch_catads/15630384831872.jpg",
-        shoplist: []
+        shoplist: [],
+        flag: 0
+    },
+    getlist(id) {
+        let that = this;
+        let str = `https://x.dscmall.cn/api/catalog/list/${id}`;
+        wx.request({
+            url: str,
+            success: (result) => {
+                that.setData({
+                    shoplist: result.data.data
+                })
+                wx.hideLoading();
+            }
+        })
     },
 
     /**
@@ -15,6 +29,9 @@ Page({
      */
     onLoad: function(options) {
         let that = this
+        wx.showLoading({
+            title: '数据拼命加载中...',
+        })
         wx.request({
             url: 'https://x.dscmall.cn/api/catalog/list',
             method: 'GET',
@@ -33,14 +50,30 @@ Page({
                 that.setData({
                     shoplist: result.data.data
                 })
+                wx.hideLoading();
             }
         })
     },
     fn(data) { //监听孩子组件发来的数据
         console.log(data.detail);
+        wx.showLoading({
+            title: '数据拼命加载中...',
+        })
         this.setData({
             imgsrc: data.detail.img
-        })
+        });
+        this.getlist(data.detail.curr);
+    },
+    rfn(data) {
+        if (data.detail == 1) {
+            this.setData({
+                flag: 1
+            })
+        } else if (data.detail == 2) {
+            this.setData({
+                flag: 2
+            })
+        }
     },
 
     /**

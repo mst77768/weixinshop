@@ -18,6 +18,7 @@ Page({
         flag: false,
         app: [0, 858, 6, 8, 3, 4, 5, 860],
         shoplist: [], //放商品的数组
+        shoplistbbb: []
     },
     //     btn(e){//绑定一个单击获取之定义属性的值
     // console.log(e.currentTarget.dataset.id)
@@ -64,7 +65,6 @@ Page({
             title: "数据拼命加载中。。。",
             mask: true
         });
-
 
         wx.request({ //ajax请求回来的数据
                 url: `https://x.dscmall.cn/api/visual/visual_second_category?cat_id=${id}`,
@@ -129,7 +129,55 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        var value = wx.getStorageSync('key');
+        console.log(value != "")
+        if (value != "") {
+            let arr = JSON.parse(value);
+            let newarr = []
+            var k = 0;
+            for (let i = 0; i <= arr.length; i++) {
+                if (i % 10 == 0 && i != 0) {
+                    newarr.push(arr.slice(k * 10, i));
+                    k++
+                }
+            }
+            console.log(newarr)
+            this.setData({
+                shoplistbbb: newarr
+            })
+        }
+        wx.request({
+            url: 'https://x.dscmall.cn/api/visual/view',
+            data: {
+                id: 3,
+                type: "index",
+                device: "h5",
+            },
+            header: { 'content-type': 'application/json' },
+            method: 'post',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+                let pinpailist = JSON.parse(result.data.data.data)[3].data.list;
 
+                wx.setStorageSync('key', JSON.stringify(pinpailist))
+                let arr = pinpailist;
+                let newarr = []
+                var k = 0;
+                for (let i = 0; i <= arr.length; i++) {
+                    if (i % 10 == 0 && i != 0) {
+                        newarr.push(arr.slice(k * 10, i));
+                        k++
+                    }
+                }
+                console.log(newarr)
+                this.setData({
+                    shoplistbbb: newarr
+                })
+            },
+            fail: () => {},
+            complete: () => {}
+        });
     },
 
 

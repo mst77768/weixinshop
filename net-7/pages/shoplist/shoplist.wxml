@@ -1,2 +1,2 @@
-<!--pages/shoplist/shoplist.wxml-->
-<text>大家好我叫{{msg}}</text>
+<!-- pages/shoplist/shoplist.wxml -->
+<view class="" hover-class="none" hover-stop-propagation="false">商品详情页{{cid}}</view>
