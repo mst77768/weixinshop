@@ -44,7 +44,7 @@
       </view>
     </swiper-item>
     <!-- 上面是首页特殊的所有没有循环 -->
-    <swiper-item wx:for="{{tabbtn1}}" wx:for-index="idx" :wx:key="idx">
+    <swiper-item wx:for="{{tabbtn1}}" wx:for-index="idx" wx:key="idx">
       <view style="claer:botn"></view>
       <view class="itmebox" hover-class="none" hover-stop-propagation="false">
         <view class="shopmain">

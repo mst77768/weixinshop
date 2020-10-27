@@ -1,6 +1,6 @@
 <!-- pages/index/indexcomment/top/top.wxml -->
 <view class="topbox" hover-class="none" hover-stop-propagation="false">
-    <view class="topitem" hover-class="none" hover-stop-propagation="false" wx:for="{{toplist}}" wx:key="{{item.cat_id}}">
+    <view class="topitem" hover-class="none" hover-stop-propagation="false" wx:for="{{toplist}}" wx:key="index">
         <view class="imgbox" hover-class="none" hover-stop-propagation="false">
             <image class="" src="{{item.touch_icon}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
         </view>

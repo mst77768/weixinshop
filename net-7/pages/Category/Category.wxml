@@ -1,2 +1,7 @@
-<!--pages/Category/Category.wxml-->
-<text>分类页面</text>
+<view class="Catebox" hover-class="none" hover-stop-propagation="false">
+    <top></top>
+    <view class="main" hover-class="none" hover-stop-propagation="false">
+        <left bind:mydata="fn" shoplist="{{list}}"></left>
+        <right imgsrc="{{imgsrc}}" shoplist="{{shoplist}}"></right>
+    </view>
+</view>

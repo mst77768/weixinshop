@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+    "usingComponents": {
+        "top": "./comment/top/top",
+        "left": "./comment/left/left",
+        "right": "./comment/right/right"
+    }
 }
