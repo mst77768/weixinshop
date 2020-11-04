@@ -1,18 +1,21 @@
 {
     "pages": [
+        "pages/shop/shop",
         "pages/index/index",
         "pages/Category/Category",
         "pages/Discovery/Discovery",
         "pages/shopcar/shopcar",
         "pages/My/My",
         "pages/shoplist/shoplist"
+      
+
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#f00000",
         "navigationBarTitleText": "商创商城",
         "navigationBarTextStyle": "white"
-        
+
     },
     "tabBar": {
         "list": [{

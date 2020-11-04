@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "top": "./comment/top/top",
+        "main": "./comment/mian/mian"
+    }
+}

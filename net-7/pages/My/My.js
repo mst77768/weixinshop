@@ -1,4 +1,6 @@
 // pages/My/My.js
+let { request } = require("../../utils/request")
+let app = getApp();
 Page({
 
     /**
@@ -15,7 +17,12 @@ Page({
         let Systeminfo = wx.getSystemInfoSync(); //获取实例化对象
         Systeminfo.windowWidth;
         this.setData({
-            width: Systeminfo.screenWidth, //把屏幕的宽度给修改了
+                width: Systeminfo.screenWidth, //把屏幕的宽度给修改了
+            })
+            // console.log(app.globalData.url)
+        let url = app.globalData.url
+        request(url + "catalog/list").then(roust => {
+            console.log(roust.data)
         })
     },
 

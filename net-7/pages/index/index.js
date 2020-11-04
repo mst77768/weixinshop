@@ -18,7 +18,8 @@ Page({
         flag: false,
         app: [0, 858, 6, 8, 3, 4, 5, 860],
         shoplist: [], //放商品的数组
-        shoplistbbb: []
+        shoplistbbb: [],
+        swiper: true
     },
     //     btn(e){//绑定一个单击获取之定义属性的值
     // console.log(e.currentTarget.dataset.id)
@@ -30,7 +31,6 @@ Page({
     // },
     change(e) { //swip的事件逻辑改变背景颜色
         var color = ["#E43124", "#E43124", "#3C81FF", "#028379", "#4091FF"];
-
         wx.setNavigationBarColor({ //这个api是改变app的头部状态来的背景颜色
             frontColor: '#ffffff',
             backgroundColor: color[e.detail.current],
@@ -52,10 +52,28 @@ Page({
             num: 1,
             flag: true
         })
-        wx.pageScrollTo({
+        wx.pageScrollTo({ //回到顶部！
             scrollTop: 0
         })
         let index = e.detail.current; //获取轮播图的当前索引
+        if (index != 0) {
+            this.setData({
+                swiper: false,
+                color: '#E43124'
+            })
+            wx.setNavigationBarColor({ //这个api是改变app的头部状态来的背景颜色
+                frontColor: '#ffffff',
+                backgroundColor: '#E43124',
+                animation: {
+                    duration: 300,
+                    timingFunc: 'easeIn'
+                }
+            })
+        } else {
+            this.setData({
+                swiper: true
+            })
+        }
         console.log(index)
         this.setData({
             "current": index
@@ -199,14 +217,28 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function() {
-
+        wx.setNavigationBarColor({ //这个api是改变app的头部状态来的背景颜色
+            frontColor: '#ffffff',
+            backgroundColor: '#E43124',
+            animation: {
+                duration: 300,
+                timingFunc: 'easeIn'
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function() {
-
+        wx.setNavigationBarColor({ //这个api是改变app的头部状态来的背景颜色
+            frontColor: '#ffffff',
+            backgroundColor: '#E43124',
+            animation: {
+                duration: 300,
+                timingFunc: 'easeIn'
+            }
+        })
     },
 
     /**

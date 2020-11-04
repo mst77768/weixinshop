@@ -30,7 +30,7 @@
     <swiper-item>
       <view>
         <view class="topbotm" style="background:{{color}}"></view>
-        <view class="swipe">
+        <view class="swipe" wx:if="{{swiper}}">
           <!-- 轮播图组件 -->
           <swiper indicator-dots="true" autoplay="true" easing-function="easeOutCubic" class="app" circular="true" bindchange="change">
             <block class="swiper" wx:for="{{imglist}}" wx:key="*this">
@@ -54,10 +54,12 @@
           <swiper-item class="" item-id="">走向人生巅峰</swiper-item>
           <swiper-item class="" item-id="">越来越强！</swiper-item>
         </swiper>
+        <view class="youbtn icon iconfont icon-xianxingtubiaozhizuomoban-07" hover-class="none" hover-stop-propagation="false"></view>
       </view>
       <view class="tupan" hover-class="none" hover-stop-propagation="false">
         <image class="" src="https://x.dscmall.cn/storage/data/gallery_album/original_img/CPvH5WHHbF0EoG9XjRQbbT3knMVCeEt9DlYGQhJM.png?imageView2/2/format/webp" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
       </view>
+      <miaosha />
     </swiper-item>
     <!-- 上面是首页特殊的所有没有循环 -->
     <swiper-item wx:for="{{tabbtn1}}" wx:for-index="idx" wx:key="idx">

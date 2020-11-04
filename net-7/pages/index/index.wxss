@@ -224,7 +224,7 @@ page {
 
 .lunzhi>.nbtext {
     margin-left: 16rpx;
-    width: 60%;
+    width: 55%;
     height: 100%;
 }
 
@@ -232,7 +232,15 @@ page {
     display: flex;
     align-items: center;
     font-weight: 800;
-    color: #333333;
+    color: #333;
+}
+
+.youbtn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 40rpx;
+    color: red;
 }
 
 .tupan {

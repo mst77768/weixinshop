@@ -1,0 +1,31 @@
+<tabbar bg="{{bg}}" />
+<scroll-view class="scrollbox" scroll-y="true" style="height: {{height}}px;" bindscroll="bindscroll" bindscrolltolower="gobtn" refresher-enabled="true" refresher-triggered="{{flag}}" bindrefresherrefresh="selall" bindrefresherrestore="fuwei">
+    <swiper class="swiperbox" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" interval="5000" next-margin="0px" bindchange="" circular="true">
+        <swiper-item>
+            <image class="" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/21b26ea3661cb4de289d4ab75591dabf.jpg?w=2452&h=920" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ebff5f5c1f52f2dbdd611897adbefd4.jpg?thumb=1&w=1533&h=575&f=webp&q=90" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/294d206e6b4c7f62251842db940fb194.jpg?thumb=1&w=1533&h=575&f=webp&q=90" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ef4160c861b998239bce9adb82341e7.jpg?thumb=1&w=1533&h=575&f=webp&q=90" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+    </swiper>
+    <view class="newtip" wx:if="{{none}}">
+        <view class="textbox" hover-class="none" hover-stop-propagation="false">
+            <view class="lefttext" hover-class="none" hover-stop-propagation="false">
+                点击“
+                <image src="/assets/images/dian.png"></image>
+                ”添加到我的小程序,微信首页下拉即可快速访问
+            </view>
+            <view class="right" hover-class="none" hover-stop-propagation="false">
+                <text class="iconfont icon-round_delete close" bindtap="close"></text>
+            </view>
+            <view class="san" hover-class="none" hover-stop-propagation="false"></view>
+        </view>
+    </view>
+    <view class="main" hover-class="none" hover-stop-propagation="false"></view>
+</scroll-view>

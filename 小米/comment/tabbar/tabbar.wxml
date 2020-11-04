@@ -1,0 +1,7 @@
+<view class="tabbar " hover-class="none" hover-stop-propagation="false" style="background:rgba(255,255,255,{{bg}})">
+    <view class="seach" hover-class="none" hover-stop-propagation="false">
+        <text class="iconfont icon-sousuo sou" selectable="false" space="false" decode="false"></text>
+        输入关键词
+    </view>
+    <text class="title " selectable="false" space="false" decode="false">正弘城+</text>
+</view>

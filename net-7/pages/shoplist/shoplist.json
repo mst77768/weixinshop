@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+    "usingComponents": {
+        "top": "./comment/top/top",
+        "main": "./comment/main/main",
+        "shoplist": "/pages/index/indexcomment/shoplist/shoplist"
+    }
 }

@@ -1,0 +1,27 @@
+<top imgs='{{imgs}}'></top>
+<view class="topbar {{bg==1?'nb':''}}" hover-class="none" hover-stop-propagation="false">
+    <view class="letf " hover-class="none" hover-stop-propagation="false">
+        <text class="iconfont icon-zuojiantou {{bg==1?'actives':''}}" selectable="false" space="false" decode="false"></text>
+    </view>
+    <view class="center" hover-class="none" hover-stop-propagation="false">
+        <view class="centerben" hover-class="none" hover-stop-propagation="false" wx:if="{{bg==1}}">
+            <text class="{{0==flag?'active1':''}}" selectable="false" data-t='0' space="false" decode="false" bindtap="tab">
+                商品
+            </text>
+            <text class="{{1==flag?'active1':''}}" selectable="false" data-t='1' space="false" decode="false" bindtap="tab">
+                详情
+            </text>
+            <text class="{{2==flag?'active1':''}}" selectable="false" data-t='2' space="false" decode="false" bindtap="tab">
+                评价
+            </text>
+        </view>
+    </view>
+    <view class="right " hover-class="none" hover-stop-propagation="false">
+        <text class="iconfont icon-fangzi {{bg==1?'actives':''}}" selectable="false" space="false" decode="false"></text>
+    </view>
+</view>
+<main datalist="{{shoplist}}" />
+<view class="abc">
+    <rich-text class="nbclass" nodes="{{shoplist.goods_desc}}"></rich-text>
+</view>
+<view class="msk"></view>

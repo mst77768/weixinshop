@@ -1,0 +1,73 @@
+/* pages/home/home.wxss */
+
+@import "/assets/fonts/iconfont.wxss";
+.scrollbox {
+    width: 100%;
+}
+
+.swiperbox {
+    width: 100%;
+    height: 538rpx;
+}
+
+.swiperbox image {
+    width: 100%;
+    height: 100%;
+}
+
+.newtip {
+    width: 50%;
+    padding: 20rpx;
+    height: 80rpx;
+    font-size: 24rpx;
+    background-color: rgba(250, 250, 249, 0.8);
+    border-radius: 20rpx;
+    position: absolute;
+    right: 40rpx;
+    top: 140rpx;
+}
+
+.textbox {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.san {
+    width: 0;
+    position: absolute;
+    top: -37rpx;
+    right: 58rpx;
+    height: 0;
+    border-bottom: 20rpx solid rgba(250, 250, 249, 0.8);
+    border-left: 20rpx solid transparent;
+    border-right: 20rpx solid transparent;
+}
+
+.lefttext {
+    width: 87%;
+    height: 100%;
+    line-height: 40rpx;
+}
+
+.lefttext image {
+    width: 45rpx;
+    height: 18rpx;
+    margin-right: -1rpx;
+}
+
+.right {
+    width: 13%;
+    height: 100%;
+    text-align: right;
+    margin-right: -9rpx;
+}
+
+.close {
+    color: black;
+}
+
+.main {
+    width: 100%;
+    height: 1800rpx;
+}

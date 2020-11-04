@@ -1,0 +1,102 @@
+/* pages/shop/shop.wxss */
+
+@import "/css/iconfont.wxss";
+.topbar {
+    width: 100%;
+    height: 80rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.nb {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ccc;
+}
+
+.letf,
+.right {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerben {
+    width: 70%;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center text {
+    height: 100%;
+    width: 22%;
+    text-align: center;
+    line-height: 28rpx;
+}
+
+.active1 {
+    border-bottom: 1px solid red;
+    color: red;
+}
+
+.letf>text {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 50rpx;
+    color: white;
+}
+
+.right>text {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 50rpx;
+    color: white;
+}
+
+.topbar .actives {
+    background-color: white;
+    color: black;
+}
+
+.abc {
+    width: 100%;
+    height: auto;
+}
+
+.nbclass {
+    width: 100%;
+    height: auto;
+}
+
+.nbclass image {
+    width: 100%;
+    height: auto;
+}
+
+.msk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}

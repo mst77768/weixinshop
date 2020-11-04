@@ -1,0 +1,37 @@
+@import "/assets/fonts/iconfont.wxss";
+.tabbar {
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    text-align: center;
+    line-height: 160rpx;
+    color: white;
+    transition: all 0.5s;
+}
+
+.xia {
+    color: black;
+}
+
+.seach {
+    position: absolute;
+    left: 40rpx;
+    width: 230rpx;
+    background-color: rgba(68, 74, 27, 0.5);
+    height: 55rpx;
+    bottom: 25rpx;
+    line-height: 55rpx;
+    border-radius: 30rpx;
+    text-align: left;
+    text-indent: 20rpx;
+    font-size: 24rpx;
+    color: white;
+}
+
+.sou {
+    margin-right: 6rpx;
+    font-size: 26rpx;
+}

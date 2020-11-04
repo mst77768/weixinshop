@@ -1,5 +1,6 @@
 <view class="rightbox" style="height:{{hig}}px">
-    <scroll-view class="scroll" scroll-y="true" scroll-left="0" style="height:{{hig}}px" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" bindscrolltoupper="top" upper-threshold="10" lower-threshold="20" bindscrolltolower="botm" scroll-top="{{y}}">
+    <scroll-view class="scroll" scroll-y="true" style="height:{{hig}}px" scroll-with-animation="true" upper-threshold="10" lower-threshold="25" bindscrolltoupper="top" bindscrolltolower="botm" scroll-top="{{y}}">
+        <view class="topbb" hover-class="none" hover-stop-propagation="false" wx:if="{{flag}}"></view>
         <view class="imgbox" hover-class="none" hover-stop-propagation="false">
             <image class="" src="{{imgsrc}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
         </view>
